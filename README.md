@@ -1,6 +1,7 @@
 # Follow Mastodon User Browser Extension
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![Mozilla Add-on](https://img.shields.io/amo/v/follow-mastodon-user?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/joshka/follow-mastodon-user-webextension?style=for-the-badge)
 
 This extension adds a button to the toolbar that will popup a window to follow
 the Mastodon user on the current page. This is mostly to scratch an itch where
@@ -9,6 +10,12 @@ your own instance, then click follow there once the search loads.
 
 To use a server other than mastodon.social, go to the settings page and enter
 the server address including https://, omitting any trailing slash.
+
+## Installation
+
+Install from https://addons.mozilla.org/en-US/firefox/addon/follow-mastodon-user/
+
+Visit the extension preferences page to update your server name from the default.
 
 ## Problem
 
