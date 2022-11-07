@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Follow Mastodon User",
     "description": "Adds an address bar button (page action) that makes it easy to follow Mastodon users",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "Joshka",
     "homepage_url": "https://github.com/joshka/follow-mastodon-user-webextension",
     "icons": {
