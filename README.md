@@ -21,12 +21,14 @@ Visit the extension preferences page to update your server name from the default
 
 Clicking the follow button on a remote server presents a dialog where you can
 copy the user name, paste it on your own instance, wait for the search to
-complete and then click add.
+complete and then click add. This is too many steps.
+
 ![remote-follow-popup](screenshots/remote-follow-popup.png)
 
 ## Solution
 
-A button on the toolbar (soon to be in the address bar)
+A button on the toolbar (soon to be in the address bar), that takes you to your
+server, where you click follow.
 
 ![follow-mastodon-user-button](screenshots/follow-mastodon-user-button.png)
 
