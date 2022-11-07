@@ -13,7 +13,7 @@ the server address including https://, omitting any trailing slash.
 
 ## Installation
 
-Install from https://addons.mozilla.org/en-US/firefox/addon/follow-mastodon-user/
+Install via <https://addons.mozilla.org/en-US/firefox/addon/follow-mastodon-user/>
 
 Visit the extension preferences page to update your server name from the default.
 
@@ -22,18 +22,13 @@ Visit the extension preferences page to update your server name from the default
 Clicking the follow button on a remote server presents a dialog where you can
 copy the user name, paste it on your own instance, wait for the search to
 complete and then click add.
-![problem](https://user-images.githubusercontent.com/381361/200236814-4b62bdd1-1723-409a-a71e-4870e6a5bceb.png)
+![remote-follow-popup](screenshots/remote-follow-popup.png)
 
 ## Solution
 
 A button on the toolbar (soon to be in the address bar)
 
-![solution](https://user-images.githubusercontent.com/381361/200236821-37232f56-9903-4749-9af5-0370bef103a2.png)
-
-That displays your instance's follow dialog directly.
-
-![solution-popup](https://user-images.githubusercontent.com/381361/200238268-86f88737-971e-4f53-83eb-c968cf62e04f.png)
-
+![follow-mastodon-user-button](screenshots/follow-mastodon-user-button.png)
 
 ## License
 
@@ -43,7 +38,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+<http://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
