@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "Follow Mastodon User",
+    "description": "Adds an address bar button (page action) that makes it easy to follow Mastodon users",
+    "version": "0.0.1",
+    "author": "Joshka",
+    "homepage_url": "https://github.com/joshka/follow-mastodon-user-webextension",
+    "icons": {
+        "48": "mastodon-logo-purple.svg",
+        "64": "mastodon-logo-purple.svg",
+        "96": "mastodon-logo-purple.svg"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{e87e8dab-396a-4dbd-966d-a2e93932ea6a}"
+        }
+    },
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "background": {
+        "scripts": [
+            "background-script.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "mastodon-logo-purple.svg",
+        "default_title": "Follow Mastodon User"
+    },
+    "options_ui": {
+        "page": "options.html",
+        "browser_style": true,
+        "chrome_style": true
+    }
+}
