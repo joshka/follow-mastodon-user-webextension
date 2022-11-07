@@ -25,7 +25,7 @@ A button on the toolbar (soon to be in the address bar)
 
 That displays your instance's follow dialog directly.
 
-![solution-popup](https://user-images.githubusercontent.com/381361/200236829-450f5ab6-4fa2-439d-8b36-20cbfd4c9640.png)
+![solution-popup](https://user-images.githubusercontent.com/381361/200238268-86f88737-971e-4f53-83eb-c968cf62e04f.png)
 
 
 ## License
