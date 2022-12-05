@@ -25,10 +25,6 @@
             "background-script.js"
         ]
     },
-    "browser_action": {
-        "default_icon": "mastodon-logo-purple.svg",
-        "default_title": "Follow Mastodon User"
-    },
     "options_ui": {
         "page": "options.html",
         "browser_style": true,
