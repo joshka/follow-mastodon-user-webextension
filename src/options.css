@@ -1,0 +1,28 @@
+#success {
+    min-height: 32px;
+    background-color: #30e60b;
+    color: #003706;
+    padding: 4px 4px 4px 24px;
+    background-repeat: no-repeat;
+    background-position: 4px center;
+    background-image: url('Check.svg');
+}
+
+#error {
+    min-height: 32px;
+    background-color: #d70022;
+    color: #ffffff;
+    /* insert an icon before the message */
+    padding: 4px 4px 4px 24px;
+    background-repeat: no-repeat;
+    background-position: 4px center;
+    background-image: url('Warning.svg');
+}
+
+#success:empty, #error:empty {
+    display: none;
+}
+
+.panel-list-item > .label {
+    min-width: 10em;
+  }

@@ -2,13 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="options.css">
   </head>
   <body>
-    <form>
-      <label>Server url:</label>
-      <input type="text" id="serverUrl">
-      <button type="submit">Save</button>
-    </form>
+    <div class="panel-section panel-section-header">
+      <div class="text-section-header">
+        Mastodon Server Settings
+      </div>
+    </div>
+
+    <div class="panel-section panel-section-formElements">
+      <div class="panel-formElements-item">
+        <label for="serverUrl">Server url:</label>
+        <input type="text" id="serverUrl">
+      </div>
+      <button class="browser-style default" id="login">Login</button>
+
+      <div id="success" class="panel-list-item"></div>
+      <div id="error" class="panel-list-item"></div>
+
+    </div>
+
+    <div class="panel-section panel-section-header">
+      <div class="text-section-header">
+        Debug properties
+      </div>
+    </div>
+    <div class="panel-section panel-section-list">
+      <div class="panel-list-item">
+        <div class="label">Client Id:</div>
+        <div class="text" id="clientId">asdf</div>
+      </div>
+      <div class="panel-list-item">
+        <div class="label">Client Secret:</div>
+        <div class="text" id="clientSecret">asdf</div>
+      </div>
+      <div class="panel-list-item">
+        <div class="label">Application Id:</div>
+        <div class="text" id="appId"></div>
+      </div>
+      <div class="panel-list-item">
+        <div class="label">Authorization Code:</div>
+        <div class="text" id="authCode"></div>
+      </div>
+      <div class="panel-list-item">
+        <div class="label">Access Token:</div>
+        <div class="text" id="accessToken"></div>
+      </div>
+    </div>
+    
+    <script src="oauth.js"></script>
     <script src="options.js"></script>
   </body>
 </html>
