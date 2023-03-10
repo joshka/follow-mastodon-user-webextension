@@ -1,5 +1,4 @@
 (() => {
-    const defaultServerUrl = 'https://mastodon.social';
     browser.storage.sync
         .get('serverUrl')
         .then((results) => results.serverUrl || defaultServerUrl)

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page-action.css">
+    <title>Follow Mastodon User</title>
+</head>
+<body>
+    <header class="panel-section panel-section-header">
+        <div class="text-section-header">
+            Follow Mastodon User
+        </div>
+    </header>
+
+    <section class="panel-section panel-section-message" id="not-logged-in">
+        <div class="panel-message-item">
+            Not logged in, visit extension options to login.
+        </div>
+        <div class="panel-message-item">
+            <button class="browser-style default" id="openOptionsPage">Open options page...</button>
+        </div>
+    </section>
+
+    <section class="panel-section panel-section-message hidden" id="logged-in">
+        <div class="panel-message-item">
+            Logged in as:&nbsp;<span id="myUsername"></span>
+        </div>
+        <div class="panel-message-item">
+            <button class="browser-style default" id="login">Open options page...</button>
+        </div>
+    </section>
+
+    <section class="panel-section panel-section-formElements hidden" id="actions">
+        <button class="browser-style hidden" id="follow">Follow</button>
+        <button class="browser-style hidden" id="unfollow">Unfollow</button>
+        <button class="browser-style hidden" id="mute">Mute</button>
+        <button class="browser-style hidden" id="unmute">Unmute</button>
+        <button class="browser-style hidden" id="block">Block</button>
+        <button class="browser-style hidden" id="unblock">Unblock</button>
+        <button class="browser-style hidden" id="report">Report</button>
+    </section>
+
+    <section class="panel-section panel-section-formElements hidden" id="debug-section">
+        <div class="panel-formElements-item">
+            <label for="debug-serverUrl">Server URL:</label>
+            <div class="text" id="debug-serverUrl"></div>
+        </div>
+        <div class="panel-formElements-item">
+            <label for="debug-accessToken">Access Token:</label>
+            <div class="text" id="debug-accessToken"></div>
+        </div>
+        <div class="panel-formElements-item">
+            <label for="debug-username">Username:</label>
+            <div class="text" id="debug-username"></div>
+        </div>
+        <div class="panel-formElements-item">
+            <label for="debug-account">Account:</label>
+            <div class="text" id="debug-account"></div>
+        </div>
+        <div class="panel-formElements-item">
+            <label for="debug-relationship">Relationship:</label>
+            <textarea id="debug-relationship" cols="50" rows="5"></textarea>
+        </div>
+        <div class="panel-formElements-item">
+            <label for="debug-text">Debug:</label>
+            <textarea id="debug-text" class="browser-style" cols="50" rows="5"></textarea>
+        </div>
+    </section>
+
+    <script src="mastodon-api.js"></script>
+    <script src="page-action.js"></script>
+</body>
+</html>

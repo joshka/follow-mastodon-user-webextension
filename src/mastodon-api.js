@@ -13,7 +13,7 @@ async function registerApp(serverUrl, redirectURL) {
         clientSecret: response.client_secret,
         appId: response.vapid_key
     };
-    console.log('Registered app', app);
+    console.log('Registered app', JSON.stringify(app));
     return app;
 }
 
@@ -51,35 +51,43 @@ async function getUserAccessToken(serverUrl, redirectURL, authCode, clientId, cl
     return token;
 }
 
-async function lookupAccount(serverUrl, acct) {
-    console.log('Looking up account', serverUrl, acct);
-    let lookupUrl = `${serverUrl}/api/v1/accounts/lookup`;
-    lookupUrl += `?acct=${encodeURIComponent(acct)}`;
-    lookupUrl += "&skip_webfinger=false";
-
-    let response = await getJson(lookupUrl, acct);
+async function verifyCredentials(serverUrl, token) {
+    console.log('Verifying credentials', serverUrl, token);
+    let verifyUrl = `${serverUrl}/api/v1/accounts/verify_credentials`;
+    let response = await getJson(verifyUrl, null, token);
     console.log(JSON.stringify(response));
     return response;
 }
 
-async function searchAccount(serverUrl, acct, token) {
-    console.log('Searching account', serverUrl, acct);
-    let lookupUrl = `${serverUrl}/api/v1/accounts/search`;
-    lookupUrl += `?q=${encodeURIComponent(acct)}`;
-    lookupUrl += "&resolve=true";
+// async function lookupAccount(serverUrl, acct) {
+//     console.log('Looking up account', serverUrl, acct);
+//     let lookupUrl = `${serverUrl}/api/v1/accounts/lookup`;
+//     lookupUrl += `?acct=${encodeURIComponent(acct)}`;
+//     lookupUrl += "&skip_webfinger=false";
 
-    let response = await getJson(lookupUrl, acct, token);
-    console.log(JSON.stringify(response));
-    return response;
-}
+//     let response = await getJson(lookupUrl, acct);
+//     console.log(JSON.stringify(response));
+//     return response;
+// }
 
-async function followAcccount(serverUrl, id, token) {
-    console.log('Following account', serverUrl, id, token);
-    let followUrl = `${serverUrl}/api/v1/accounts/${id}/follow`;
-    let response = await postJson(followUrl, id, token);
-    console.log(JSON.stringify(response));
-    return response;
-}
+// async function searchAccount(serverUrl, acct, token) {
+//     console.log('Searching account', serverUrl, acct);
+//     let lookupUrl = `${serverUrl}/api/v1/accounts/search`;
+//     lookupUrl += `?q=${encodeURIComponent(acct)}`;
+//     lookupUrl += "&resolve=true";
+
+//     let response = await getJson(lookupUrl, acct, token);
+//     console.log(JSON.stringify(response));
+//     return response;
+// }
+
+// async function followAcccount(serverUrl, id, token) {
+//     console.log('Following account', serverUrl, id, token);
+//     let followUrl = `${serverUrl}/api/v1/accounts/${id}/follow`;
+//     let response = await postJson(followUrl, id, token);
+//     console.log(JSON.stringify(response));
+//     return response;
+// }
 
 function postJson(url, data, token) {
     return fetchJson('POST', url, data, token);
