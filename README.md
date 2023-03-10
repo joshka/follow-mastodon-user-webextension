@@ -11,6 +11,22 @@ your own instance, then click follow there once the search loads.
 To use a server other than mastodon.social, go to the settings page and enter
 the server address including https://, omitting any trailing slash.
 
+## Contributing
+
+To run the extension locally, install web-ext via npm:
+
+```shell
+npm install -g web-ext
+```
+
+And then run with the following command
+
+```shell
+web-ext run --source-dir ./src --target firefox-desktop --devtools --browser-console
+```
+
+This command is also found in the [just file](https://github.com/joshka/follow-mastodon-user-webextension/blob/main/.justfile) as `just run`. (See <https://just.systems/> for more details).
+
 ## Installation
 
 Install via <https://addons.mozilla.org/en-US/firefox/addon/follow-mastodon-user/>
